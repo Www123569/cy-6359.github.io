@@ -1,0 +1,1009 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+//1rem=40px
+
+@total_contentx2:750;
+@total_contentx3:1125;
+
+html{
+    font-size: 5.333vw;//1rem=40px
+    a{
+        text-decoration: none;
+        color: rgb(0,0,0);
+    }
+    li{
+        list-style: none;
+    }
+}
+body{
+    font-family: 'Aa新华霜剑体 (非商业使用)','楷体','宋体';
+}
+
+//h2 游戏截图
+.line{
+    width: 100%;
+    height: 100px;
+    background-image: url("../img/game_img/bg.jpg");
+    text-align: center;
+    h2{
+        padding-top: 50px;
+        color: white;
+    }
+}
+
+//截图站点的css
+.game_img_list{
+    width: 100%;
+    //背景的高度
+    //背景图片
+    background-image: url("../img/game_img/bg.jpg");
+    background-size: cover;
+    .game_img_box:nth-child(1){
+        margin-top: 0;
+    }
+    .game_img_box{
+        width:97vw;
+        margin: 0 auto;
+        margin-top: 20px;
+        a{
+            display: block;
+            width: 100%;
+            // border:1px solid red;
+            box-shadow: 0 5px 10px rgba(19, 18, 18, 0.7);
+            border: 1px solid rgba(218, 102, 98, 0.2);
+            img{
+                width: 100%;
+                border-radius: 2px;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+
+//顶部nav
+.top_bar{
+    position: fixed;
+    width: 100%;
+    line-height: 40px;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    .left_menu{
+        height: 40px;
+        .left_menu_icon{
+            position: relative;
+            width:80/40rem;
+            height: 40px;
+            li{
+                width: 18px;
+                height: 2px;
+                background-color: rgb(255, 255, 255);
+                position: absolute;
+                transform-origin: left center;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                margin: 0 auto;
+                transition:0.5s all;
+            }
+            li:nth-child(1) {
+                top: 12px;
+                // transform:rotate(50deg);
+            }
+            li:nth-child(2) {
+                top: 19px;
+                //点击时隐藏
+                // display: none;
+            }
+            li:nth-child(3) {
+                top: 26px;
+                // transform:rotate(-50deg);
+            }
+        }
+        .eject_nav{
+            display:none;
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 40px;
+            bottom: 0;
+            z-index: 5;
+            width:40%;
+            box-shadow: 0 0 15px rgba(0,0,0.1);
+            text-align: center;
+            // background-color: cyan;
+            background-image: url('../img/redemption2/eject_div.png');
+            background-size: 100%;
+            // opacity: 0.7;
+            li{
+                position: relative;
+                a{
+                    width:100%;
+                    display:block;
+                    width:100%;
+                    line-height: 50px;
+                    position:absolute;
+                    z-index: 6;
+                    top: 20px;
+                    color: white;
+                }
+                &:nth-child(1){
+                    top: 25px;
+                }
+                &:nth-child(2){
+                    top: 75px;
+                }
+                &:nth-child(3){
+                    top: 150px;
+                }
+                &:nth-child(4){
+                    top: 200px;
+                }
+                &:nth-child(5){
+                    top: 250px;
+                }
+                &:nth-child(6){
+                    top: 300px;
+                }
+            }
+        }
+    }
+    h1{
+        font-size: 35/40rem;
+        color: white;
+        padding-left: 20/40rem;
+    }
+    .shopping{
+        background-image: url(../img/redemption2/top_shopping.png);
+        background-repeat: no-repeat;
+        background-position: 80%;
+        color: #000;
+        line-height: 37px;
+        font-size: 32/40rem;
+        // border-top: 2px solid #000;
+        // border-bottom: 2px solid #000;
+        box-sizing: border-box;
+        a{
+            display: block;
+            height: 100%;
+        }
+    }
+
+}
+
+//cover
+.gangs_box{
+    // width: 100%;
+    background: url("../img/gangs_img/gangs.jpg");
+
+    //动物的图片容器 list
+    .animai_list{
+        width: 95%;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }
+    .animai_list2{
+        width:95%;
+        margin: 0 auto;
+        overflow: auto;
+        .list_animai{
+            width: 100%;
+            display: flex;
+            img{
+                // width: 100%;
+                width: 680/40rem;
+                margin-right: 10px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    //枪支的视频展示
+    .video_list{
+        width: 100%;
+    }
+    //武器选择和自定义下的详细介绍 arms外部总容器 list
+    .arms_introduce_list{
+        width: 100%;
+        //武器介绍里的单个容器
+        .arms_introduce{
+            width: 95%;
+            margin: 0 auto;
+            text-align: center;
+            a{
+                width: 100%;
+                img{
+                    width: 100%;
+                    background-size: cover;
+                    transition: all 1s;
+                }
+            }
+            p{
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+                color: rgb(255, 255, 255);
+                font-size: 14px;
+            }
+        }
+    }
+    //  武器介绍里的第二个cover封面
+    .cover_arms2{
+        width: 660/40rem;
+        height: 1200/40rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        // margin-top: 50px;
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        p{
+            color:white;
+            font-size: 16px;
+        }
+        h2:nth-child(1){
+            margin-top: 50px;
+        }
+        h2{
+            color:white;
+            font-size: 65/40rem;
+            margin: 10px 0;
+        }
+        .bottom_icon{
+            position: relative;
+            i{
+                color: rgb(255, 255, 255);
+                display: block;
+                height: 30px;
+                font-size: 50/40rem;
+                animation: bottom_icon 2s infinite;
+                position: absolute;
+                left: 49%;
+                z-index: 11;
+            }
+        }
+        //死神之眼的box容器
+        .sszy_gif_box{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            a{
+                margin-right: 5px;
+                margin-left: 5px;
+                width:100%;
+                img:nth-child(1){
+                    
+                }
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    .cover_arms{
+        width: 660/40rem;
+        height: 600/40rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        // margin-top: 50px;
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        p{
+            color:white;
+            font-size: 16px;
+        }
+        h2:nth-child(1){
+            margin-top: 50px;
+        }
+        h2{
+            color:white;
+            font-size: 65/40rem;
+            margin: 10px 0;
+        }
+        .bottom_icon{
+            position: relative;
+            i{
+                color: rgb(255, 255, 255);
+                display: block;
+                height: 30px;
+                font-size: 50/40rem;
+                animation: bottom_icon 2s infinite;
+                position: absolute;
+                left: 49%;
+                z-index: 11;
+            }
+        }
+    }
+
+    //武器种类图片的外部容器
+    .arms_img{
+        width: 95%;
+        margin: 0 auto;
+        box-shadow: 0 2px 5px rgba(145, 3, 3, 0.3);
+        img{
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+
+    //帮派封面的外部容器
+    .gangs_cover{
+        width: 660/40rem;
+        height: 600/40rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        // margin-top: 50px;
+        text-align: center;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        p{
+            color:white;
+            font-size: 18px;
+        }
+        h2:nth-child(1){
+            margin-top: 50px;
+        }
+        h2{
+            color:white;
+            font-size: 65/40rem;
+            margin: 10px 0;
+        }
+        .bottom_icon{
+            position: relative;
+            i{
+                color: white;
+                display: block;
+                height: 30px;
+                font-size: 50/40rem;
+                animation: bottom_icon 2s infinite;
+                position: absolute;
+                left: 49%;
+            }
+        }
+    }
+    .gangs_people{
+        width: 100%;
+        .item{
+            width: 100%;
+            height:1070/40rem;
+            position: relative;
+            .gangs_background{
+                display:none;
+            }
+            .phone_gangs_people{
+                //  background-image: url("../img/gangs_img/phone_people1.jpg");
+                width: 100%;
+                img{
+                    vertical-align: top;
+                }
+                img{
+                    width:100%;
+                    height:1070/40rem;
+                    background-size: 100%;
+                }
+            }
+            .gangs_name{
+                line-height: 30px;
+                height: 30px;
+                text-align: center;
+                display: block;
+                text-align: center;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                font-size: 30px;
+                color: white;
+                position: absolute;
+                top: 15px;
+                // left: 300/40rem;
+
+            }
+            .gangs_saying{
+                display:block;
+                width:500/40rem;
+                text-align: center;
+                // -webkit-text-stroke:1px #000;
+                // right: 0;
+                // left: 0;
+                text-shadow: 2px 2px #000, 0 0 2px #000;
+                margin: 0 auto;
+                font-size: 26px;
+                color: white;
+                position: absolute;
+                bottom: 190px;
+                right: 0;
+            }
+            .introduce{
+                background-image: url("../img/gangs_img/title_background.png");
+                width: 100%;
+                height: 125px;
+                background-size: cover;
+                position: absolute;
+                bottom: 0;
+                p{
+                    display: block;
+                    width: 90%;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    color: white;
+                    position: absolute;
+                    bottom: 10px;
+                    font-size: 17px;
+                    text-shadow: 2px 2px #000, 0 0 2px #000;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+//footer
+.footer{
+    width:100%;
+    overflow: hidden;
+    background: url(../img/redemption2/footer_img1.jpg);
+    background-size: cover;
+    position: relative;
+    bottom: 0;
+    .footer_div1{
+        width: 100%;
+        img{
+            background-size: cover;
+        }
+    }
+    .footer_div2{
+       width: 100%;
+       text-align: center;
+       .title_p1{
+          font-size:90/40rem;
+          color: white;
+          box-shadow: 0 0px 1px rgb(243, 151, 151);
+       }
+       .title_p2{
+        font-size:40/40rem;
+        color: white;
+        margin: 20px 0;
+     }
+    }
+    .bottom_icon{
+        width: 100%;
+        height: 380px;
+        box-sizing: border-box;
+        background-image: url("../img/redemption2/footer_img3.png");
+        background-size: cover;
+        padding-top: 80px;
+        .title_p3{
+            display: block;
+            text-align: center;
+            font-size: 70/40rem;
+            color: rgb(233, 231, 135);
+        }
+        .title_p4{
+            display: block;
+            text-align: center;
+            font-size: 30/40rem;
+            color: white;
+        }
+        .bottom_sub{
+            text-align: center;
+            a{
+                display: block;
+                width: 270/40rem;
+                background: red;
+                margin: 0 auto;
+                margin-top: 10px;
+                color: white;
+                font-size: 15/40rem;
+                line-height: 36px;
+                border-radius: 5/40rem;
+                box-shadow: 0 0 20px rgba(218, 102, 98, 0.644);
+            }
+        }
+        .sub_icon{
+            margin-top: 7px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            a{
+                display: block;
+                width: 100px;
+                line-height: 50px;
+            }
+            a:nth-child(1) {
+                color: white;
+            }
+            a:nth-child(2) {
+                color: white;
+            }
+            a:nth-child(3) {
+                color: white;
+            }
+            a:nth-child(4) {
+                color: white;
+            }
+            a:nth-child(5) {
+                color: white;
+            }
+        }
+
+        .footer_level{
+            width: 300/40rem;
+            height: 82px;
+            margin-top: 20px;
+            position: absolute;
+            left: 10vw;
+        }
+        .footer_logo{
+            width: 140/40rem;
+            height: 42px;
+            margin: 30px auto;
+            margin-left: 270px;
+        }
+    }
+}
+
+@keyframes bottom_icon{
+    from {
+        bottom: 0px;
+    }
+    to{
+        bottom: -40px;
+    }
+}
+//提示黄字方便定位到大于768px的分割
+.d{
+
+}
+//大于768px时的样式
+@media only screen and (min-width:768px)
+{
+
+    @keyframes bottom_icon{
+        from {
+            bottom: 150px;
+        }
+        to{
+            bottom: -50px;
+        }
+    }
+    //大于768px时video的样式！
+    .video_list{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        video{
+            width: 900px;
+        }
+    }
+ //线 h2 游戏截图
+    .line{
+        h2{
+            font-size:25px;
+            padding-top: 45px;
+        }
+    }
+    //游戏截图最外围的box
+    .game_img_list{
+        width: 100%;
+        display:flex;
+        flex-wrap: wrap;
+
+
+        .game_img_box:nth-child(1)
+        {
+            margin-top: 20px;
+        }
+        .game_img_box{
+            width:500px;
+            height: 281px;
+            margin-top: 0;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            border: 1px solid rgba(219, 200, 200, 0.2);
+            margin-top: 20px;
+            a{
+                transition: all 2s;
+                border: 0;
+                img{
+                    
+                }
+                // box-shadow: 0 5px 5px rgba(48, 70, 131, 0.7);
+                &:hover{
+                    transform:scale(2,2);
+                    filter:grayscale(70%);
+                }
+            }
+        }
+    }
+
+    //content的最外层容器！
+    .gangs_box{
+        .animai_list2{
+            width:100%;
+            overflow: hidden;
+            .list_animai{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                img{
+                    width:400px;
+                    margin:20px;
+                    transition: all 0.5s;
+                }
+                img:hover{
+                    transform:scale(1.1,1.1);
+                    filter:grayscale(30%);
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.9);
+                }
+            }
+        }
+        // 底部动物图鉴的h3 id！
+        #animai_h3{
+            font-size: 40px;
+        }
+        //动物介绍的最外层容器
+        .animai_list{
+            width:100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            img{
+                width: 300px;
+                margin-top: 20px;
+                transition: all 0.5s;
+            }
+            img:hover{
+                transform:scale(1.1,1.1);
+                filter:grayscale(40%);
+                box-shadow: 0 2px 10px rgba(0,0,0,0.9);
+            }
+        }
+        //武器介绍的封面1 (大于768px时应用)
+        .cover_arms{
+            height: 600px;
+            width:50%;
+            h2{
+                font-size: 40px;
+            }
+            p{
+                font-size: 22px;
+            }
+            .bottom_icon{
+
+                i{
+                    font-size: 40px;
+                }
+            }
+        }
+        //武器介绍的封面2 (大于768px时应用)
+        .cover_arms2{
+            height: 800px;
+            h2{
+                font-size: 40px;
+            }
+            p{
+                font-size: 20px;
+            }
+            .bottom_icon{
+
+                i{
+                    font-size: 50px;
+                }
+            }
+        }
+        //武器介绍list的容器 大于768px
+        .arms_introduce_list{
+            display:flex;
+            flex-wrap: wrap;
+            .arms_introduce{
+                width:400px;
+                p{
+                    font-size: 25px;
+                }
+                img:hover{
+                    transform:scale(1.1,1.1);
+                    filter:grayscale(10%);
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.9);
+                }
+            }
+        }
+
+        //枪支视频战士，pc版预告片的h3
+        #pc,#arms_video{
+            font-size: 30px;
+            text-align: center;
+            margin-top: 40px
+        }
+
+        //封面:cover
+        .gangs_cover{
+            
+            widows: 700px;
+            height: 700px;
+            h2{
+                font-size: 40px;
+            }
+            p{
+                font-size: 25px;
+            }
+            .bottom_icon{
+                height: 100px;
+                position: relative;
+                i{
+                    font-size: 35px;
+                    animation: bottom_icon 2s infinite;
+                    position: absolute;
+                    left: 49%;
+                }
+            }
+        }
+        //人物介绍列表最外层容器
+        .gangs_people{
+            width: 100%;
+            overflow: hidden;
+            //介绍盒子内的每一层的外面容器
+            .item{
+                width: 100%;
+                height: 1000px;
+                //PC端大于768px的时候显示此box
+                .gangs_background{
+                    width: 100%;
+                    height: 1100px;
+                    overflow: hidden;
+                    display:block;
+                    position: relative;
+                    img{
+                        width: 100%;
+                        height: 1000px;
+                        background-size: cover;
+                    }
+                    .gangs_people{
+                        width: 100%;
+                        img{
+                            background-repeat: no-repeat;
+                            position:absolute;
+                            top: 0;
+                            height: 1100px;
+                            width:auto;
+                            transition: all 5s;
+                            &:hover{
+                                transform:scale(1.2,1.2);
+                                filter:grayscale(70%);
+                            }
+                        }
+                    }
+                }
+                //web端大于768px时隐藏此box
+                .phone_gangs_people{
+                    display:none;
+                }
+                .gangs_name{
+                    font-size: 40px;
+                    left: 70%;
+                    top: 45%;
+                }
+                .gangs_saying{
+                    font-size: 40px;
+                    // top: 35%;
+                    position: absolute;
+                    bottom: 60%;
+                    transition: all 2s;
+
+                    &:hover{
+                        color: rgb(155, 131, 131);
+                        text-shadow: 2px 2px #000, 0 0 2px #000;
+                        font-size: 42px;
+                    }
+                }
+                .introduce{
+
+                    p{
+                        font-size: 20px;
+                        position: absolute;
+                        top: 70px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .cover{
+        display:none;
+    }
+    .top_bar_container{
+        width: 100%;
+        height: 60px;
+        background-color: #000000;
+        .top_bar{
+            width:100%;
+            height: 60px;
+            max-width: 100%;
+            .left_menu{
+                order: 2;
+                display:flex;
+                .left_menu_icon{
+                    display: none;
+                }
+                .eject_nav{
+                    display: flex !important;
+                    position: static;
+                    justify-content: space-between;
+                    width: 700px;
+                    li{
+                        position: static;
+                        a{
+                            position: static;
+                            font-size: 25px;
+                            transition :all 0.4s;
+                            &:hover{
+                                color: rgb(204,0,0);
+                            }
+                        }
+                    }
+                }
+                
+            }
+            h1{
+                display:block;
+                line-height: 60px;
+                font-size:15/40rem;
+                order: 1;
+                padding-left:10px;
+                transition: all 0.2s;
+                position: relative;
+            }
+            h1:hover{
+                transform: translatey(-1px);
+                transform: rotate(-5deg);
+                color: rgb(204,0,0);
+                &::before{
+                    content: '';
+                    display: block;
+                    width:36px;
+                    height: 36px;
+                    position:absolute;
+                    left: 105%;
+                    top: 25px;
+                    background-image: url('../img/redemption2/logo.ico');
+                    background-size: cover;
+                    transform: rotate(5deg);
+                }
+            }
+            .shopping{
+                width:156px;
+                background-size: 130%;
+                text-align: center;
+                font-size: 30px;
+                line-height: 60px;
+                box-sizing: border-box;
+                order: 3;
+                a{
+                    transition: all 0.5s;
+                }
+                &>a:hover{
+                    color: white;
+                    // transform: translatey(-5px);
+                    transform:translatex(2px)
+                }
+            }
+        }
+    }
+       //footer
+       .footer{
+        height: 950px;
+        .footer_div1{
+
+        }
+        .footer_div2{
+            
+            .title_p1{
+                font-size: 45px;
+            }
+            .title_p2{
+                font-size: 80px;
+                transition: all 3s;
+                &:hover{
+                    color: #000000;
+                }
+            }
+        }
+        .bottom_icon{
+            height: 900px;
+            .title_p3{
+                margin-top: 100px;
+                font-size:25px;
+                margin: 20px 0;
+                &:hover{
+                    color: rgb(219, 183, 63);
+                }
+            }
+            .title_p4{
+                font-size:25px;
+            }
+            .bottom_sub{
+                a{
+                    line-height: 50px;
+                    margin-top: 30px;
+                    width: 200px;
+                    font-size: 17px;
+                    transition: all 0.3s;
+                    &:hover{
+                        color: #000000;
+                        font-size: 20px;
+                    }
+                }
+
+            }
+            .sub_icon{
+                justify-content: center;
+                a{
+                    font-size: 40px;
+                    margin-top: 20px;
+                    &:hover{
+                        color: rgb(255, 0, 0);
+                        transform: rotateZ(360deg);
+                        transition: all 1s;
+                    }
+                }
+            }
+            .footer_level{
+                width:300px;
+                margin-left: 50px;
+            }
+            .footer_logo{
+                width:200px;
+                margin:0 auto;
+                margin-right: 250px;
+            }
+        }
+    }
+}    
+//大于1600px时的样式
+@media only screen and (min-width:1600px)
+{
+    .top_bar_container{
+        .top_bar{
+            h1{
+                font-size: 20px;
+            }
+        }
+        .shopping{
+            
+        }
+        .eject_nav{
+            padding-right: 20px;
+        }
+    }
+}
+
+// 小于770px时
+@media only screen and (max-width:770px)
+{
+    .video_list{
+        width: 100%;
+        video{
+            width: 100%;
+        }
+    }
+}
